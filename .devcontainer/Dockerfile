@@ -12,6 +12,3 @@ RUN dpkg -i /tmp/bat_0.12.1_amd64.deb
 
 # istalling The Silver Searcher 'cause it's awesome
 RUN apt-get install silversearcher-ag
-
-# installing kind for Kubernetes
-RUN go install sigs.k8s.io/kind@v0.20.0
