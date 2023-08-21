@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-depl
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        name: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: wesleywillians/nginx-imersao13
+        ports:
+          - containerPort: 80
